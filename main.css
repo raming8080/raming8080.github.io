@@ -1,0 +1,14 @@
+.form-title {
+  display: none;
+}
+.section-title {
+  padding: 5px 5px 5px 10px;
+  background-color: #203864;
+  border-bottom-color: #cccccc;
+  border-radius: 5px;
+}
+
+label.section-label {
+  color: white;
+  font-size: 13px;
+}

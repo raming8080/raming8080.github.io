@@ -1,0 +1,14 @@
+#form-title-header {
+    display: none;
+  }
+  .cf-section-header {
+    padding: 5px 5px 5px 10px;
+    background-color: green;
+    border-bottom-color: #cccccc;
+    border-radius: 5px;
+  }
+  
+  .form-q.cf-section-header h2 {
+    color: white;
+    font-size: 13px;
+  }
