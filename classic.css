@@ -1,12 +1,15 @@
 .cf-form {
   padding-top: 0px;
 }
+
 #cf-formtitle {
   margin-bottom: 0px;
 }
+
 .FormTitleReplacement {
   display: none;
 }
+
 .cf-section-header {
   padding: 5px 5px 5px 10px;
   background-color: #203864;
@@ -17,4 +20,18 @@
 .form-q.cf-section-header h2 {
   color: white;
   font-size: 13px;
+}
+
+/*Displays two fields per line*/
+.TwoPerLine {
+  display: inline-block;
+  width: 50%;
+}
+
+.TwoPerLine .cf-medium {
+  width: 97%;
+}
+
+.TwoPerLine .cf-small {
+  width: 97%;
 }
