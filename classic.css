@@ -21,3 +21,16 @@
   color: white;
   font-size: 13px;
 }
+/*Displays two fields per line*/
+/* .TwoPerLine {
+  display: inline-block;
+  width: 50%;
+}
+
+.TwoPerLine .cf-medium {
+  width: 97%;
+}
+
+.TwoPerLine .cf-small {
+  width: 97%;
+} */
