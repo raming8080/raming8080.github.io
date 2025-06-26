@@ -481,8 +481,7 @@ body {
     height: 60px !important;
   }
   .nav-links {
-    gap: 1rem;
-    font-size: 1rem;
+    display: none !important;
   }
   .modal-content {
     max-width: 98vw;
