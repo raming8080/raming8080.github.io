@@ -135,7 +135,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.2rem;
   min-width: 0;
 }
 .card {
@@ -147,7 +147,7 @@ body {
   min-width: 0;
   overflow: hidden;
   max-width: 1400px;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 1.2rem auto;
   align-items: start;
 }
 .content-cards > .card {
@@ -183,11 +183,16 @@ body {
   margin-bottom: 0.7rem;
 }
 .card-title {
-  font-size: 2rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 0 0 1.2rem 0;
+  color: #fa6868;
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: 0.1rem;
   line-height: 1.2;
   word-break: break-word;
+  order: 1;
 }
 .card-image {
   max-width: 100%;
@@ -195,10 +200,12 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+  margin-top: 0;
   margin-bottom: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   display: block;
+  order: 2;
 }
 .card-details {
   font-size: 1.08rem;
@@ -232,7 +239,7 @@ body {
   background: none;
   color: #222;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 400;
   border-left: 2px solid #eaeaea;
   padding-left: 2.5rem;
@@ -278,7 +285,7 @@ body {
     font-size: 1.2rem;
   }
   .content-cards {
-    gap: 2rem;
+    gap: 1.2rem;
   }
   .card {
     display: flex;
@@ -286,6 +293,7 @@ body {
     padding: 1.2rem 0.7rem 1.2rem 0.7rem;
     max-width: 100%;
     gap: 0;
+    margin: 0 auto 1.2rem auto;
   }
   .card-summary {
     position: static;
@@ -327,51 +335,162 @@ body {
 }
 
 @media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1rem 1rem 1rem;
-    gap: 0.5rem;
+  body {
+    padding: 0 0.5rem;
   }
   .main-layout {
-    padding: 0 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    gap: 0;
+    min-width: 0;
+    max-width: 100vw;
   }
   .day-numbers {
-    gap: 1rem;
-    margin: 0 0 1rem 0;
+    display: none !important;
   }
   .day-number {
     margin: 0 0.7rem 0 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .day-number .weekday-date {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .content-cards {
     gap: 1.2rem;
+    width: 100%;
+    min-width: 0;
   }
   .card {
-    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
-    border-radius: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .card-title,
+  .card-image,
+  .card-summary,
+  .card-details {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    width: 100%;
+    box-sizing: border-box;
   }
   .card-title {
-    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
   }
   .card-image {
+    margin-top: 0;
+  }
+  .card-summary { order: 3; }
+  .card-details { order: 4; }
+  .card-title {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
+    white-space: normal;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-align: center;
+  }
+  .card-image {
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
     max-width: 100%;
+    width: 100%;
+    min-height: 160px;
+    height: auto;
+    object-fit: cover;
     border-radius: 8px;
+    display: block;
+    box-sizing: border-box;
   }
   .card-summary {
-    font-size: 0.98rem;
-    padding-top: 0.7rem;
-    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    margin-top: 0.7rem;
     border-top: 1px solid #eaeaea;
     border-left: none;
-    right: 0;
-    left: 0;
-    top: unset;
     width: 100%;
     position: static;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+  .card-details {
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .right-sidebar {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.2rem 0 0 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .right-sidebar .floating-info,
+  .right-sidebar .notes-card {
+    margin: 0 auto 1.2rem auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .floating-info {
+    position: static;
+    top: unset;
+    margin: 1.2rem auto 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    max-width: 100vw;
+    min-width: unset;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+  .floating-info-content {
+    line-height: 1.6;
+    font-weight: 500;
+    font-size: 1rem;
+    overflow-wrap: break-word;
+  }
+  nav.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0.5rem;
+    gap: 0.5rem;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .navbar-banner-bg {
+    min-height: 80px;
+    height: 80px;
+  }
+  .banner-image {
+    min-height: 80px;
+    height: 80px;
+    object-fit: cover;
+    width: 100vw;
+  }
+  .nav-logo img {
+    height: 60px !important;
+  }
+  .nav-links {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .modal-content {
+    max-width: 98vw;
+    padding: 0.5rem;
+  }
+  .modal-image {
+    max-width: 95vw;
+    max-height: 60vh;
   }
 }
 
@@ -383,7 +502,12 @@ body {
     padding: 0.7rem 0.2rem 0.7rem 0.2rem;
   }
   .card-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.1rem;
+  }
+  .card-image {
+    margin-top: 0;
   }
   .card-summary {
     font-size: 0.95rem;
@@ -627,7 +751,7 @@ body.dark-mode .card-meta {
   color: #b0b0b0;
 }
 body.dark-mode .card-title {
-  color: #fff;
+  color: #fa6868;
 }
 body.dark-mode .card-details a,
 body.dark-mode .floating-info-content a {
